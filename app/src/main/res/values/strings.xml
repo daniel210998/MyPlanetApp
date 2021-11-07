@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyPlanetApp</string>
+    <string name="newString">Hola Mundo</string>
 </resources>
