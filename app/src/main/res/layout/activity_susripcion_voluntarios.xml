@@ -95,14 +95,6 @@
         app:layout_constraintVertical_bias="0.956"
         app:strokeColor="#4CAF50" />
 
-    <FrameLayout
-        android:layout_width="331dp"
-        android:layout_height="280dp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="105dp">
-
-    </FrameLayout>
-
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
@@ -114,5 +106,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.065"
         app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.289" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
