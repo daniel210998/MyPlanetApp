@@ -2,4 +2,7 @@
     <string name="app_name">MyPlanetApp</string>
     <string name="newString">Hola Yuri</string>
     <string name="valbtnSuscribirse">Suscribirse</string>
+    <string name="valtxtNombre">Nombre</string>
+    <string name="valtxtApellido">Apellidos</string>
+    <string name="valtxtPais">País</string>
 </resources>
