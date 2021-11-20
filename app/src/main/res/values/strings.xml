@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">MyPlanetApp</string>
+    <string name="app_name">My Planet</string>
     <string name="newString">Hola Yuri</string>
     <string name="valbtnSuscribirse">Suscribirse</string>
     <string name="valtxtNombre">Nombre</string>
     <string name="valtxtApellido">Apellidos</string>
     <string name="valtxtPais">País</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

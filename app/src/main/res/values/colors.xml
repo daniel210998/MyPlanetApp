@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="planet_primaryColor">#2e7d32</color>
+    <color name="planet_primaryLightColor">#60ad5e</color>
+    <color name="planet_primaryDarkColor">#005005</color>
+    <color name="planet_primaryTextColor">#ffffff</color>
+    <color name="planet_primaryTabTextColor">#8d8d8d</color>
+    <color name="planet_backgroundColor">#eeeeee</color>
 </resources>

@@ -4,28 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserMainActivity">
+    tools:context=".events_timeline.FragmentEventGeneral"
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_user"
+    >
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout_events"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/planet_primaryColor"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/planet_primaryLightColor"
+        app:tabSelectedTextColor="@color/planet_primaryTextColor"
+        app:tabTextColor="@color/planet_primaryTextColor"/>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment_event"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager_events"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_user"
-        app:navGraph="@navigation/nav_graph_event" />
+        app:layout_constraintTop_toBottomOf="@+id/tablayout_events" />
 </androidx.constraintlayout.widget.ConstraintLayout>

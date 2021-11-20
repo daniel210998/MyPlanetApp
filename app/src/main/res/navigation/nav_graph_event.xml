@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_event"
+    app:startDestination="@id/fragmentEventGeneral">
+    <fragment
+        android:id="@+id/fragmentEventGeneral"
+        android:name="dev.example.myplanetapp.events_timeline.FragmentEventGeneral"
+        android:label="My Planet"
+        tools:layout="@layout/fragment_event_general" >
+        <action
+            android:id="@+id/action_fragmentEventGeneral_to_fragmentUserProfile"
+            app:destination="@id/fragmentUserProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUserProfile"
+        android:name="dev.example.myplanetapp.user_profile.FragmentUserProfile"
+        android:label="Mi perfil"
+        tools:layout="@layout/fragment_user_profile" />
+</navigation>

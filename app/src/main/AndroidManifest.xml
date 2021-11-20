@@ -16,7 +16,7 @@
             android:name=".SusripcionVoluntariosActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".UserMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
