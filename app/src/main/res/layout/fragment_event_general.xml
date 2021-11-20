@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".events_timeline.FragmentEventGeneral"
+    android:background="@color/planet_backgroundColor"
 
-    >
+    tools:context=".events_timeline.FragmentEventGeneral">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout_events"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/planet_primaryLightColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/planet_primaryLightColor"
         app:tabSelectedTextColor="@color/planet_primaryTextColor"
-        app:tabTextColor="@color/planet_primaryTextColor"/>
+        app:tabTextColor="@color/planet_primaryTextColor" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager_events"
