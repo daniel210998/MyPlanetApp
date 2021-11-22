@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import dev.example.myplanetapp.R
+import dev.example.myplanetapp.adapters.RecyclerViewAllEventsAdapter
+import dev.example.myplanetapp.model.VolunteeringEvent
 
 class FragmentAllEvents : Fragment() {
 
@@ -19,5 +23,23 @@ class FragmentAllEvents : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_all_events, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val rvEvent: RecyclerView = view.findViewById(R.id.rv_allEvents)
+        rvEvent.layoutManager = LinearLayoutManager(activity)
+        rvEvent.adapter = RecyclerViewAllEventsAdapter(listVolunteeringEvent())
+    }
+
+    private fun listVolunteeringEvent(): List<VolunteeringEvent>
+    {
+        val lstEV: ArrayList<VolunteeringEvent> = ArrayList()
+        lstEV.add(VolunteeringEvent(1, "Produce Give Away","3:00 pm", 14, R.drawable.playa ))
+        lstEV.add(VolunteeringEvent(2, "Limpieza de playas","12:00 am", 14, R.drawable.pasco ))
+        lstEV.add(VolunteeringEvent(3, "Limpieza de playas","3:00 pm", 14, R.drawable.playa ))
+
+        return lstEV
     }
 }

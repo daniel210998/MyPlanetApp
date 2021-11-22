@@ -4,4 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/planet_backgroundColor"
-    tools:context=".events_timeline.FragmentAllEvents" />
+    tools:context=".events_timeline.FragmentAllEvents" >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_allEvents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>
