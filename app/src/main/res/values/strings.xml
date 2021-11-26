@@ -10,15 +10,15 @@
     <string name="valtxtDNI"></string>
     <string name="valtxtEmail"></string>
     <string name="valtxtPassword"></string>
-    <straing-array name = "Sexo">
+    <string-array name = "Sexo">
         <item>Masculino</item>
         <item>Femenino</item>
         <item>Otros</item>
-    </straing-array>
-    <straing-array name = "Discapadidad">
+    </string-array>
+    <string-array name = "Discapadidad">
         <item>Sí tengo discapacidad</item>
         <item>No tengo discapacidad</item>
-    </straing-array>
+    </string-array>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="valtxtDireccion" />
@@ -26,4 +26,5 @@
     <string name="valtxtNumero" />
     <string name="valtxtOcupacion" />
     <string name="valtxtComentario" />
+    <string name="valbtnEnviar">Enviar</string>
 </resources>
