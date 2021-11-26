@@ -145,16 +145,5 @@
         app:layout_constraintVertical_bias="0.52"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:background="@color/teal_200"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="Registro de Voluntarios"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
