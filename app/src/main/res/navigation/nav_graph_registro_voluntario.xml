@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_registro_voluntario"
+    app:startDestination="@id/fragmentDatos1">
+
+    <fragment
+        android:id="@+id/fragmentDatos1"
+        android:name="dev.example.myplanetapp.RegistroVoluntario.FragmentDatos1"
+        android:label="fragment_datos1"
+        tools:layout="@layout/fragment_datos1" >
+        <action
+            android:id="@+id/action_fragmentDatos1_to_fragmentDatos2"
+            app:destination="@id/fragmentDatos2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDatos2"
+        android:name="dev.example.myplanetapp.RegistroVoluntario.FragmentDatos2"
+        android:label="fragment_datos2"
+        tools:layout="@layout/fragment_datos2" >
+        <action
+            android:id="@+id/action_fragmentDatos2_to_fragmentDatos3"
+            app:destination="@id/fragmentDatos3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDatos3"
+        android:name="dev.example.myplanetapp.RegistroVoluntario.FragmentDatos3"
+        android:label="fragment_datos3"
+        tools:layout="@layout/fragment_datos3" />
+</navigation>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegistroVoluntario.FragmentDatos1">
+
+
+    <Button
+        android:id="@+id/btnSiguiente2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valbtnSiguiente"
+        android:textColorHighlight="#4CAF50"
+        app:iconTint="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.867"
+        app:strokeColor="#4CAF50" />
+
+    <EditText
+        android:id="@+id/txtApellido2"
+        android:layout_width="287dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        android:text="@string/valtxtApellido"
+        android:textColor="#070707"
+        android:textColorHint="#0C0C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtPais2"
+        android:layout_width="287dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="País"
+        android:inputType="textPersonName"
+        android:text="@string/valtxtPais"
+        android:textColor="#0B0B0B"
+        android:textColorHint="#0C0C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtEmail3"
+        android:layout_width="287dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:text="@string/valtxtEmail"
+        android:textColor="#0B0B0B"
+        android:textColorHint="#0C0C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtEmail4"
+        android:layout_width="287dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:text="@string/valtxtPassword"
+        android:textColor="#0B0B0B"
+        android:textColorHint="#0C0C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtNombre2"
+        android:layout_width="286dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Nombres"
+        android:inputType="textPersonName"
+        android:text="@string/valtxtNombre"
+        android:textColor="#090909"
+        android:textColorHint="#070707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtFecha2"
+        android:layout_width="286dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Fecha de Nacimiento"
+        android:inputType="date"
+        android:textColorHint="#070707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.435"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtDocumento2"
+        android:layout_width="287dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="DNI"
+        android:inputType="textPersonName"
+        android:text="@string/valtxtDNI"
+        android:textColor="#0B0B0B"
+        android:textColorHint="#0C0C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
