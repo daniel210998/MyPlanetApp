@@ -17,9 +17,6 @@
 >>>>>>> 33ffcb313eddec530a2183e9a1154af9f8430731
             android:exported="true" />
         <activity
-            android:name=".RegistroVoluntariosActivity"
-            android:exported="true" />
-        <activity
             android:name=".SusripcionVoluntariosActivity"
             android:exported="true" />
         <activity
