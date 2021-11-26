@@ -10,6 +10,14 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.example.myplanetapp.R
 import dev.example.myplanetapp.adapters.RecyclerViewAllEventsAdapter
 import dev.example.myplanetapp.model.VolunteeringEvent
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+
+
+
+
+
 
 class FragmentAllEvents : Fragment() {
 
@@ -30,7 +38,40 @@ class FragmentAllEvents : Fragment() {
 
         val rvEvent: RecyclerView = view.findViewById(R.id.rv_allEvents)
         rvEvent.layoutManager = LinearLayoutManager(activity)
-        rvEvent.adapter = RecyclerViewAllEventsAdapter(listVolunteeringEvent())
+        val l = listVolunteeringEvent()
+        rvEvent.adapter = RecyclerViewAllEventsAdapter(l)
+    }
+
+    private fun retrieveVolunteeringEvent() : List<VolunteeringEvent>
+    {
+        val lstEV: ArrayList<VolunteeringEvent> = ArrayList()
+
+        val db = FirebaseFirestore.getInstance()
+
+        val storageRef = FirebaseStorage.getInstance().reference
+        var playaRef = storageRef.child("img_events/playa.jpg")
+
+        val ONE_MEGABYTE: Long = 1024 * 1024
+        playaRef.getBytes(ONE_MEGABYTE).addOnSuccessListener {
+            // Data for "images/island.jpg" is returned, use this as needed
+        }.addOnFailureListener {
+            // Handle any errors
+        }
+
+        db.collection("users")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    Log.d(TAG, "${document.id} => ${document.data}")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w(TAG, "Error getting documents.", exception)
+            }
+
+
+
+        return lstEV
     }
 
     private fun listVolunteeringEvent(): List<VolunteeringEvent>
