@@ -25,7 +25,8 @@
         android:layout_height="657dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="240dp">
+        tools:layout_editor_absoluteY="240dp"
+        tools:ignore="MissingConstraints">
 
         <ScrollView
             android:layout_width="match_parent"
