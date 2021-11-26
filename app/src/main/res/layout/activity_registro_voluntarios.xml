@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".RegistroVoluntariosActivity">
-
 
     <TextView
         android:id="@+id/tvRegistroVoluntario"
@@ -24,9 +24,9 @@
         android:layout_width="409dp"
         android:layout_height="657dp"
         android:orientation="vertical"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="240dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="240dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -80,6 +80,5 @@
 
         </ScrollView>
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
