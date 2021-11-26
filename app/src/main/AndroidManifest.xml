@@ -13,9 +13,6 @@
             android:name=".RegistroVoluntarioActivity"
             android:exported="true" />
         <activity
-            android:name=".RegistroVoluntariosActivity"
-            android:exported="true" />
-        <activity
             android:name=".SusripcionVoluntariosActivity"
             android:exported="true" />
         <activity
