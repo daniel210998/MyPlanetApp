@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPlanetApp">
         <activity
+            android:name=".CreateEventActivity"
+            android:exported="true" />
+        <activity
             android:name=".RegistroVoluntariosActivity"
             android:exported="true" />
         <activity

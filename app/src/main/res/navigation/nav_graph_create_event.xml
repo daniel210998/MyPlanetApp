@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_create_event"
+    app:startDestination="@id/fragmentStep1">
+    <fragment
+        android:id="@+id/fragmentStep1"
+        android:name="dev.example.myplanetapp.create_event.FragmentPaso1"
+        android:label="fragment_step1"
+        tools:layout="@layout/fragment_step1" >
+        <action
+            android:id="@+id/action_fragmentStep1_to_fragmentStep1Campaign"
+            app:destination="@id/fragmentStep1Campaign" />
+        <action
+            android:id="@+id/action_fragmentStep1_to_fragmentStep1CoHost"
+            app:destination="@id/fragmentStep1CoHost" />
+        <action
+            android:id="@+id/action_fragmentStep1_to_fragmentStep2"
+            app:destination="@id/fragmentStep2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStep1Campaign"
+        android:name="dev.example.myplanetapp.create_event.FragmentPaso1Campaign"
+        android:label="fragment_step1_campaign"
+        tools:layout="@layout/fragment_step1_campaign" />
+    <fragment
+        android:id="@+id/fragmentStep1CoHost"
+        android:name="dev.example.myplanetapp.create_event.FragmentStep1CoHost"
+        android:label="fragment_step1_co_host"
+        tools:layout="@layout/fragment_step1_co_host" />
+    <fragment
+        android:id="@+id/fragmentStep2"
+        android:name="dev.example.myplanetapp.create_event.FragmentStep2"
+        android:label="fragment_step2"
+        tools:layout="@layout/fragment_step2" >
+        <action
+            android:id="@+id/action_fragmentStep2_to_fragmentStep3"
+            app:destination="@id/fragmentStep3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStep3"
+        android:name="dev.example.myplanetapp.create_event.FragmentStep3"
+        android:label="fragment_step3"
+        tools:layout="@layout/fragment_step3" >
+        <action
+            android:id="@+id/action_fragmentStep3_to_fragmentStep4"
+            app:destination="@id/fragmentStep4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStep4"
+        android:name="dev.example.myplanetapp.create_event.FragmentStep4"
+        android:label="fragment_step4"
+        tools:layout="@layout/fragment_step4" >
+        <action
+            android:id="@+id/action_fragmentStep4_to_fragmentStep5"
+            app:destination="@id/fragmentStep5" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStep5"
+        android:name="dev.example.myplanetapp.create_event.FragmentStep5"
+        android:label="fragment_step5"
+        tools:layout="@layout/fragment_step5" >
+        <action
+            android:id="@+id/action_fragmentStep5_to_fragmentStep6"
+            app:destination="@id/fragmentStep6" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStep6"
+        android:name="dev.example.myplanetapp.create_event.FragmentStep6"
+        android:label="fragment_step6"
+        tools:layout="@layout/fragment_step6" />
+</navigation>
