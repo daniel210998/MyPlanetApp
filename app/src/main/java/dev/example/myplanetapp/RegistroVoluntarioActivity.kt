@@ -25,5 +25,8 @@ class RegistroVoluntarioActivity : AppCompatActivity() {
         val adaptadorDiscapacidad = ArrayAdapter(this,android.R.layout.simple_spinner_item,listaDiscapacidad)
         spnSexo.adapter = adaptadorSexo
         spnDiscapacidad.adapter = adaptadorDiscapacidad
+
+
+
     }
 }
