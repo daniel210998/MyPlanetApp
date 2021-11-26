@@ -1,6 +1,8 @@
 package dev.example.myplanetapp.events_timeline
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,9 +15,6 @@ import dev.example.myplanetapp.model.VolunteeringEvent
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-
-
-
 
 
 

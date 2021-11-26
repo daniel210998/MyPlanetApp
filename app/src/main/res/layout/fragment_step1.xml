@@ -45,7 +45,6 @@
             android:text="+"
             android:textSize="34sp"
             app:cornerRadius="200dp"
-            app:shapeAppearance="oval"
             tools:layout_editor_absoluteX="18dp"
             tools:layout_editor_absoluteY="504dp" />
 
@@ -56,7 +55,6 @@
             android:text="+"
             android:textSize="34sp"
             app:cornerRadius="200dp"
-            app:shapeAppearance="oval"
             tools:layout_editor_absoluteX="18dp"
             tools:layout_editor_absoluteY="398dp" />
 
@@ -67,7 +65,6 @@
             android:text="+"
             android:textSize="34sp"
             app:cornerRadius="200dp"
-            app:shapeAppearance="oval"
             tools:layout_editor_absoluteX="18dp"
             tools:layout_editor_absoluteY="293dp" />
 
