@@ -24,8 +24,6 @@ import com.google.firebase.storage.StorageReference
 
 class FragmentAllEvents : Fragment() {
 
-    private lateinit var lstEV: ArrayList<VolunteeringEvent>
-
     private val db:FirebaseFirestore = FirebaseFirestore.getInstance()
     private val collectionReference:CollectionReference = db.collection("event")
 
@@ -46,7 +44,7 @@ class FragmentAllEvents : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val query: Query = collectionReference
+        val query: Query = collectionReference.orderBy("id", Query.Direction.ASCENDING)
         val firestoreRecyclerOptions: FirestoreRecyclerOptions<VolunteeringEvent> = FirestoreRecyclerOptions.Builder<VolunteeringEvent>()
             .setQuery(query, VolunteeringEvent::class.java)
             .build()
