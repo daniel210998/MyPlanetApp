@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:id="@+id/container"
     tools:context=".RegistroVoluntario.FragmentDatos3">
 
     <Button
@@ -34,5 +35,6 @@
         android:textColorHint="#B33E3E"
         android:textSize="34sp"
         tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="152dp" />
+        tools:layout_editor_absoluteY="152dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ListView
 import android.widget.Spinner
+import androidx.navigation.findNavController
 import dev.example.myplanetapp.R
 
 class FragmentDatos2 : Fragment() {
@@ -19,8 +21,12 @@ class FragmentDatos2 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_datos2, container, false)
+        var view = inflater.inflate(R.layout.fragment_datos2, container, false)
+        view.findViewById<Button>(R.id.btnEnviar).setOnClickListener {
+            view.findNavController().navigate(R.id.action_fragmentDatos2_to_fragmentDatos3) }
+        return view
     }
+
 
 
 }
