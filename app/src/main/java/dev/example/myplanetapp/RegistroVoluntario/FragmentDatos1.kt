@@ -21,10 +21,14 @@ class FragmentDatos1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var view = inflater.inflate(R.layout.fragment_datos1, container, false)
+        return inflater.inflate(R.layout.fragment_datos1, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         view.findViewById<Button>(R.id.btnSiguiente).setOnClickListener {
             view.findNavController().navigate(R.id.action_fragmentDatos1_to_fragmentDatos2) }
-        return view
     }
 
 
