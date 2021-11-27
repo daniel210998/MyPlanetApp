@@ -14,6 +14,7 @@ import dev.example.myplanetapp.R
 class FragmentDatos2 : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
