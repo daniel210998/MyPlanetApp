@@ -106,15 +106,16 @@
 
                             <TextView
                                 android:id="@+id/eventDay"
-                                android:layout_width="25dp"
-                                android:layout_height="20dp"
-                                android:layout_marginTop="2dp"
-                                android:text="16"
+                                android:layout_width="22dp"
+                                android:layout_height="19dp"
+                                android:layout_marginTop="1dp"
+                                android:gravity="center"
+                                android:text="11"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.611"
+                                app:layout_constraintHorizontal_bias="0.523"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -169,7 +170,7 @@
                 app:srcCompat="@drawable/clock" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/sponsorLogo"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="16dp"
@@ -186,7 +187,7 @@
                 android:layout_marginTop="22dp"
                 android:text="Auspiciador XXXX"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintStart_toEndOf="@+id/sponsorLogo"
                 app:layout_constraintTop_toBottomOf="@+id/eventTime" />
 
             <View

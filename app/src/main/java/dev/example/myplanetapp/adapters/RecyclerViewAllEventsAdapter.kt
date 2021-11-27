@@ -26,6 +26,7 @@ class RecyclerViewAllEventsAdapter(options: FirestoreRecyclerOptions<Volunteerin
         val eventSponsor: TextView = itemView.findViewById(R.id.eventSponsor)
         val eventCalendarDay: TextView = itemView.findViewById(R.id.eventDay)
         val eventCalendarMonth: TextView = itemView.findViewById(R.id.eventMonth)
+        val eventSponsorLogo: ImageView = itemView.findViewById(R.id.sponsorLogo)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,11 +42,18 @@ class RecyclerViewAllEventsAdapter(options: FirestoreRecyclerOptions<Volunteerin
         holder.eventCalendarDay.text = model.day.toString()
         holder.eventCalendarMonth.text = model.month
 
-        val storageReference = FirebaseStorage.getInstance().reference.child(model.picture.toString())
+        val storageReference = FirebaseStorage.getInstance().reference
+        val picRef = storageReference.child(model.picture.toString())
+        val logoRef = storageReference.child(model.sponsor_logo.toString())
 
         GlideApp.with(holder.itemView)
-            .load(storageReference)
+            .load(picRef)
             .into(holder.eventPicture)
+
+        GlideApp.with(holder.itemView)
+            .load(logoRef)
+            .into(holder.eventSponsorLogo)
+
     }
 
 }

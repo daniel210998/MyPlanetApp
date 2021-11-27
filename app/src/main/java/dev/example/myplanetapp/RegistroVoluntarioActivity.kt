@@ -10,8 +10,6 @@ class RegistroVoluntarioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_voluntario)
 
-
-
         val spnSexo = findViewById<Spinner>(R.id.spnSexo)
         val spnDiscapacidad = findViewById<Spinner>(R.id.spnDiscapacidad)
 
@@ -24,8 +22,6 @@ class RegistroVoluntarioActivity : AppCompatActivity() {
         val adaptadorDiscapacidad = ArrayAdapter(this,android.R.layout.simple_spinner_item,listaDiscapacidad)
         spnSexo.adapter = adaptadorSexo
         spnDiscapacidad.adapter = adaptadorDiscapacidad
-
-
 
     }
 }
