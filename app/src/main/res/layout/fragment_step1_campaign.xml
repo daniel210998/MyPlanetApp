@@ -1,14 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".create_event.FragmentPaso1Campaign">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:id="@+id/btnGuardarCampaniaPaso1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="57dp"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbxMedioAmbiPaso1" />
 
-</FrameLayout>
+    <CheckBox
+        android:id="@+id/cbxMedioAmbiPaso1"
+        android:layout_width="224dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="133dp"
+        android:text="Medio Ambiente"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardarCampaniaPaso1"
+        app:layout_constraintEnd_toEndOf="@+id/btnGuardarCampaniaPaso1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbxNetworkingPaso1" />
+
+    <CheckBox
+        android:id="@+id/cbxNetworkingPaso1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:text="Networking"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cbxMedioAmbiPaso1"
+        app:layout_constraintEnd_toEndOf="@+id/cbxMedioAmbiPaso1"
+        app:layout_constraintStart_toStartOf="@+id/cbxMedioAmbiPaso1"
+        app:layout_constraintTop_toBottomOf="@+id/cbxSubastaBenePaso1" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="322dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="22dp"
+        android:text="Tu haz seleccionado 0 etiquetas:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cbxSubastaBenePaso1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregarCategoriaPaso1" />
+
+    <Button
+        android:id="@+id/btnAgregarCategoriaPaso1"
+        android:layout_width="82dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="18dp"
+        android:text="+"
+        android:textSize="34sp"
+        app:cornerRadius="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView43"
+        app:layout_constraintEnd_toStartOf="@+id/textView42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="35dp"
+        android:text="Agregar Campaña"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAgregarCategoriaPaso1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="69dp"
+        android:text="Crear Nueva Categoria"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAgregarCategoriaPaso1"
+        app:layout_constraintTop_toTopOf="@+id/btnAgregarCategoriaPaso1" />
+
+    <CheckBox
+        android:id="@+id/cbxSubastaBenePaso1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:text="Subasta Benefica"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cbxNetworkingPaso1"
+        app:layout_constraintEnd_toEndOf="@+id/cbxNetworkingPaso1"
+        app:layout_constraintStart_toStartOf="@+id/cbxNetworkingPaso1"
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
+</androidx.constraintlayout.widget.ConstraintLayout>

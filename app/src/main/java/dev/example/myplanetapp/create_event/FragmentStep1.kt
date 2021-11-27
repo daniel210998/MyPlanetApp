@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 import dev.example.myplanetapp.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,6 +38,14 @@ class FragmentPaso1 : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_step1, container, false)
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<Button>(R.id.btnSiguienteStep1).setOnClickListener{view.findNavController().navigate(R.id.action_fragmentStep1_to_fragmentStep2)}
+        view.findViewById<Button>(R.id.btnAgregarCampaniaPaso1).setOnClickListener{view.findNavController().navigate(R.id.action_fragmentStep1_to_fragmentStep1Campaign)}
+        view.findViewById<Button>(R.id.btnAgregarCoHostPaso1).setOnClickListener{view.findNavController().navigate(R.id.action_fragmentStep1_to_fragmentStep1CoHost)}
     }
 
     companion object {
@@ -58,3 +68,5 @@ class FragmentPaso1 : Fragment() {
             }
     }
 }
+
+
