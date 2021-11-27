@@ -23,6 +23,9 @@ class RecyclerViewAllEventsAdapter(options: FirestoreRecyclerOptions<Volunteerin
         val eventTitle: TextView = itemView.findViewById(R.id.eventTitle)
         val eventTime: TextView = itemView.findViewById(R.id.eventTime)
         val eventSpots: TextView = itemView.findViewById(R.id.eventSpots)
+        val eventSponsor: TextView = itemView.findViewById(R.id.eventSponsor)
+        val eventCalendarDay: TextView = itemView.findViewById(R.id.eventDay)
+        val eventCalendarMonth: TextView = itemView.findViewById(R.id.eventMonth)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,6 +37,9 @@ class RecyclerViewAllEventsAdapter(options: FirestoreRecyclerOptions<Volunteerin
         holder.eventTitle.text = model.title
         holder.eventTime.text = model.time
         holder.eventSpots.text = model.spots.toString()
+        holder.eventSponsor.text = model.sponsor
+        holder.eventCalendarDay.text = model.day.toString()
+        holder.eventCalendarMonth.text = model.month
 
         val storageReference = FirebaseStorage.getInstance().reference.child(model.picture.toString())
 
