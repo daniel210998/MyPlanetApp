@@ -10,12 +10,12 @@ import com.google.firebase.firestore.FirebaseFirestore
 import dev.example.myplanetapp.LoginActivity
 import dev.example.myplanetapp.R
 import android.content.Intent
+import dev.example.myplanetapp.databinding.FragmentDatos3Binding
 
 class FragmentDatos3 : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
 
     }
 
@@ -23,21 +23,26 @@ class FragmentDatos3 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        val bind = FragmentDatos3Binding.inflate(layoutInflater)
+        bind.btnSalir.setOnClickListener {
+            val intent = Intent(this@FragmentDatos3.requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+
+
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_datos3, container, false)
+        return bind.root
+        //return inflater.inflate(R.layout.fragment_datos3, container, false)
 
 
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
-        val intent = Intent(activity, LoginActivity::class.java)
-        requireActivity().startActivity(intent)
 
 //        val intent = Intent(this, LoginActivity::class.java)
 //        startActivity(intent)
 
-    }
+
 
 }

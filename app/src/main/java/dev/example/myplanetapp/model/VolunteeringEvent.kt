@@ -1,8 +1,16 @@
 package dev.example.myplanetapp.model
 
-class VolunteeringEvent(val id: Int,
-                        val title: String,
-                        val time: String,
-                        val spots: Int,
-                        val picture: Int,
+import com.google.firebase.storage.StorageReference
+
+class VolunteeringEvent(var id: Int? = null,
+                        var title: String? = null,
+                        var time: String? = null,
+                        var spots: Int? = null,
+                        var sponsor: String? = null,
+                        var day: Int? = null,
+                        var month: String? = null,
+                        var year: Int? = null,
+                        var sponsor_logo: String? = null,
+                        var picture: String? = null
+
 ){}

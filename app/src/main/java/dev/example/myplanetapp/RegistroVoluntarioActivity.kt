@@ -2,10 +2,7 @@ package dev.example.myplanetapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Adapter
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
+import android.widget.*
 
 class RegistroVoluntarioActivity : AppCompatActivity() {
 
@@ -25,8 +22,6 @@ class RegistroVoluntarioActivity : AppCompatActivity() {
         val adaptadorDiscapacidad = ArrayAdapter(this,android.R.layout.simple_spinner_item,listaDiscapacidad)
         spnSexo.adapter = adaptadorSexo
         spnDiscapacidad.adapter = adaptadorDiscapacidad
-
-
 
     }
 }
