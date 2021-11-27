@@ -9,16 +9,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.DocumentChange
 import dev.example.myplanetapp.R
 import dev.example.myplanetapp.adapters.RecyclerViewAllEventsAdapter
 import dev.example.myplanetapp.model.VolunteeringEvent
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
 
 
 class FragmentAllEvents : Fragment() {
+
+    private lateinit var lstEV: ArrayList<VolunteeringEvent>
+
+    private val db:FirebaseFirestore = FirebaseFirestore.getInstance()
+    private val collectionReference:CollectionReference = db.collection("event")
+
+    var eventAdapter: RecyclerViewAllEventsAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,51 +46,25 @@ class FragmentAllEvents : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val query: Query = collectionReference
+        val firestoreRecyclerOptions: FirestoreRecyclerOptions<VolunteeringEvent> = FirestoreRecyclerOptions.Builder<VolunteeringEvent>()
+            .setQuery(query, VolunteeringEvent::class.java)
+            .build()
+
+        eventAdapter = RecyclerViewAllEventsAdapter(firestoreRecyclerOptions)
+
         val rvEvent: RecyclerView = view.findViewById(R.id.rv_allEvents)
         rvEvent.layoutManager = LinearLayoutManager(activity)
-        val l = listVolunteeringEvent()
-        rvEvent.adapter = RecyclerViewAllEventsAdapter(l)
+        rvEvent.adapter = eventAdapter
     }
 
-    private fun retrieveVolunteeringEvent() : List<VolunteeringEvent>
-    {
-        val lstEV: ArrayList<VolunteeringEvent> = ArrayList()
-
-        val db = FirebaseFirestore.getInstance()
-
-        val storageRef = FirebaseStorage.getInstance().reference
-        var playaRef = storageRef.child("img_events/playa.jpg")
-
-        val ONE_MEGABYTE: Long = 1024 * 1024
-        playaRef.getBytes(ONE_MEGABYTE).addOnSuccessListener {
-            // Data for "images/island.jpg" is returned, use this as needed
-        }.addOnFailureListener {
-            // Handle any errors
-        }
-
-        db.collection("users")
-            .get()
-            .addOnSuccessListener { result ->
-                for (document in result) {
-                    Log.d(TAG, "${document.id} => ${document.data}")
-                }
-            }
-            .addOnFailureListener { exception ->
-                Log.w(TAG, "Error getting documents.", exception)
-            }
-
-
-
-        return lstEV
+    override fun onStart() {
+        super.onStart()
+        eventAdapter!!.startListening()
     }
 
-    private fun listVolunteeringEvent(): List<VolunteeringEvent>
-    {
-        val lstEV: ArrayList<VolunteeringEvent> = ArrayList()
-        lstEV.add(VolunteeringEvent(1, "Produce Give Away","3:00 pm", 14, R.drawable.playa ))
-        lstEV.add(VolunteeringEvent(2, "Limpieza de playas","12:00 am", 14, R.drawable.pasco ))
-        lstEV.add(VolunteeringEvent(3, "Limpieza de playas","3:00 pm", 14, R.drawable.playa ))
-
-        return lstEV
+    override fun onDestroy() {
+        super.onDestroy()
+        eventAdapter!!.stopListening()
     }
 }
