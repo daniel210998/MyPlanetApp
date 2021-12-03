@@ -5,14 +5,22 @@
     <string name="valbtnSiguiente">Siguiente</string>
     <string name="valbtnEnviar">Enviar</string>
     <string name="valbtnSalir">Salir</string>
+    <string name="valbtnLogin">Login</string>
 
     <string name="valtxtNombre"></string>
     <string name="valtxtApellido"></string>
     <string name="valtxtPais"></string>
     <string name="valtxtFecha"></string>
     <string name="valtxtDNI"></string>
+
     <string name="valtxtEmail"></string>
+    <string name="valtxtEmailloginV">Email de Voluntario</string>
+    <string name="valtxtEmailloginA">Email de Auspiciador</string>
+
     <string name="valtxtPassword"></string>
+    <string name="valtxtPasswordloginV">Password de Voluntario</string>
+    <string name="valtxtPasswordloginA">Password de Auspiciador</string>
+
     <string-array name="Sexo">
         <item>Masculino</item>
         <item>Femenino</item>
@@ -29,6 +37,7 @@
     <string name="valtxtNumero" />
     <string name="valtxtOcupacion" />
     <string name="valtxtComentario"></string>
+
     <string name="valtxtFelicidades">Felicidades!
     El registro fue exitoso</string>
 </resources>
