@@ -43,14 +43,14 @@ class FragmentEventGeneral : Fragment() {
 
         val fragments: ArrayList<Fragment> = arrayListOf(
             FragmentAllEvents(),
-            FragmentOnGoing(),
+            //FragmentOnGoing(),
             FragmentMyEvents()
         )
 
         val adapter = ViewPagerAdapterForEvents(fragments, this)
         viewPager.adapter = adapter
 
-        tabsName = mapOf(0 to "Muro", 1 to "En curso", 2 to "Mis eventos")
+        tabsName = mapOf(0 to "Muro", 1 to "Mis eventos")
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = "${(tabsName[position])}"

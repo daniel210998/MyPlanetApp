@@ -46,19 +46,30 @@ class JoinToEvent(val eventModel: VolunteeringEvent, val docId: String) : Bottom
         eventSpots.text = strSponsor
 
         val spotsAvaliable: Int = eventModel.spots!!
-        var thereAreSpots: Boolean = true
 
         if(spotsAvaliable > 0)
         {
             btnApplyEvent.isVisible = true
-            thereAreSpots = true
             eventSpots.visibility = View.VISIBLE
             bottomHiddenText.visibility = View.GONE
         }
         else
         {
             btnApplyEvent.isVisible = false
-            thereAreSpots = false
+            eventSpots.visibility = View.GONE
+            bottomHiddenText.visibility = View.VISIBLE
+        }
+
+
+        if(spotsAvaliable > 0)
+        {
+            btnApplyEvent.isVisible = true
+            eventSpots.visibility = View.VISIBLE
+            bottomHiddenText.visibility = View.GONE
+        }
+        else
+        {
+            btnApplyEvent.isVisible = false
             eventSpots.visibility = View.GONE
             bottomHiddenText.visibility = View.VISIBLE
         }
