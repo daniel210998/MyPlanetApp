@@ -36,7 +36,6 @@ class JoinToEvent(val eventModel: VolunteeringEvent, val docId: String) : Bottom
         val eventSpots: TextView = view.findViewById(R.id.bottomSpots)
         val btnApplyEvent: Button = view.findViewById(R.id.bottomBtnApplyToEvent)
         val bottomHiddenText: TextView = view.findViewById(R.id.bottomHiddenText)
-        btnApplyEvent.isVisible = true
 
         val strSponsor = "Quedan " + eventModel.spots.toString() + " lugares disponibles"
 
@@ -44,10 +43,11 @@ class JoinToEvent(val eventModel: VolunteeringEvent, val docId: String) : Bottom
         eventTime.text = eventModel.time
         eventSponsor.text = eventModel.sponsor
         eventSpots.text = strSponsor
+        eventPlace.text = eventModel.place
 
-        val spotsAvaliable: Int = eventModel.spots!!
+        val spotsAvailable: Int = eventModel.spots!!
 
-        if(spotsAvaliable > 0)
+        if(spotsAvailable > 0 && !eventModel.selected!!)
         {
             btnApplyEvent.isVisible = true
             eventSpots.visibility = View.VISIBLE
@@ -55,31 +55,31 @@ class JoinToEvent(val eventModel: VolunteeringEvent, val docId: String) : Bottom
         }
         else
         {
-            btnApplyEvent.isVisible = false
-            eventSpots.visibility = View.GONE
-            bottomHiddenText.visibility = View.VISIBLE
-        }
-
-
-        if(spotsAvaliable > 0)
-        {
-            btnApplyEvent.isVisible = true
-            eventSpots.visibility = View.VISIBLE
-            bottomHiddenText.visibility = View.GONE
-        }
-        else
-        {
-            btnApplyEvent.isVisible = false
-            eventSpots.visibility = View.GONE
-            bottomHiddenText.visibility = View.VISIBLE
+            if(spotsAvailable > 0 && eventModel.selected!!)
+            {
+                btnApplyEvent.isVisible = false
+                eventSpots.visibility = View.GONE
+                bottomHiddenText.visibility = View.VISIBLE
+                bottomHiddenText.text = "Gracias por estar participando!"
+            }
+            else
+            {
+                btnApplyEvent.isVisible = false
+                eventSpots.visibility = View.GONE
+                bottomHiddenText.visibility = View.VISIBLE
+            }
         }
 
 
         btnApplyEvent.setOnClickListener {
-            eventModel.spots = spotsAvaliable - 1
-            db.collection("event")
-                .document(docId)
-                .update("spots", eventModel.spots)
+            eventModel.spots = spotsAvailable - 1
+
+            val eventCardRef = db.collection("event").document(docId)
+            val updates: HashMap<String, Any> = hashMapOf(
+                "spots" to eventModel.spots!!,
+                "selected" to true
+            )
+            eventCardRef.update(updates)
 
             this.dismiss()
         }

@@ -13,6 +13,7 @@ class VolunteeringEvent(var id: Int? = null,
                         var sponsor_logo: String? = null,
                         var picture: String? = null,
                         var description: String? = null,
+                        var selected: Boolean? = null,
                         var place: String? = null,
-                        var isSelected: Boolean? = null
+
 ){}
