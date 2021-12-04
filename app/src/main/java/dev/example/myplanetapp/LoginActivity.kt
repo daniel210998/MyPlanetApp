@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dev.example.myplanetapp.RegistroVoluntario.FragmentDatos3
 import dev.example.myplanetapp.LoginActivity as LoginActivity1
 
@@ -12,6 +14,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+//        val navController = findNavController(R.id.fragment)
 
 //        val BtnOpenFragment: Button = findViewById(R.id.btnCreateV)
 //        BtnOpenFragment.setOnClickListener {
