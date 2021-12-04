@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import androidx.navigation.findNavController
 import dev.example.myplanetapp.R
 
@@ -43,9 +44,19 @@ class FragmentStep4 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.btnSiguienteStep4).setOnClickListener{view.findNavController().navigate(R.id.action_fragmentStep4_to_fragmentStep5)}
+        globalCantPersonas = Integer.parseInt(view.findViewById<EditText>(R.id.txtCantidadPersPaso4).text.toString().replace(" ", ""))
+        globalHoraIni = view.findViewById<EditText>(R.id.txtHoraIniPaso4).text.toString()
+        globalDia = Integer.parseInt(view.findViewById<EditText>(R.id.txtFechaInicio).text.toString().replace(" ", "").slice(0..1))
+        globalMes = view.findViewById<EditText>(R.id.txtFechaInicio).text.toString().slice(3..4)
+        globalAnio = Integer.parseInt(view.findViewById<EditText>(R.id.txtFechaInicio).text.toString().replace(" ", "").slice(6..9))
     }
 
     companion object {
+        var globalCantPersonas = 0;
+        var globalHoraIni = "";
+        var globalDia = 0;
+        var globalMes = "";
+        var globalAnio = 0;
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.

@@ -6,7 +6,7 @@
     app:startDestination="@id/fragmentStep1">
     <fragment
         android:id="@+id/fragmentStep1"
-        android:name="dev.example.myplanetapp.create_event.FragmentPaso1"
+        android:name="dev.example.myplanetapp.create_event.FragmentStep1"
         android:label="fragment_step1"
         tools:layout="@layout/fragment_step1" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentStep1Campaign"
-        android:name="dev.example.myplanetapp.create_event.FragmentPaso1Campaign"
+        android:name="dev.example.myplanetapp.create_event.FragmentStep1Campaign"
         android:label="fragment_step1_campaign"
         tools:layout="@layout/fragment_step1_campaign" />
     <fragment

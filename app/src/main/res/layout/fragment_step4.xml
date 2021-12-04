@@ -22,8 +22,8 @@
         android:id="@+id/textView33"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="8dp"
         android:text="¿Cuántas personas pueden venir?"
         android:textColor="@color/black"
@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toTopOf="@+id/txtCantidadPersPaso4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaFin" />
 
     <TextView
         android:id="@+id/textView24"
@@ -39,7 +39,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="27dp"
         android:layout_marginEnd="27dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="2dp"
         android:text="Elija una hora para su evento, los eventos de un día son los mejores para los voluntarios."
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -81,20 +81,20 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="51dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginBottom="11dp"
         android:text="Fecha de Fin"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/calendarView4"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaFin"
         app:layout_constraintEnd_toStartOf="@+id/textView32"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaInicio" />
 
     <TextView
         android:id="@+id/textView26"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="57dp"
+        android:layout_marginEnd="56dp"
         android:layout_marginBottom="20dp"
         android:text="Hora de inicio:"
         android:textColor="@color/black"
@@ -110,21 +110,21 @@
         android:layout_height="0dp"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="37dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="6dp"
         android:text="Fecha de inicio:"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/calendarView3"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaInicio"
         app:layout_constraintEnd_toStartOf="@+id/textView26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <TextView
         android:id="@+id/textView32"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="159dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="16dp"
         android:text="Hora de fin:"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -133,66 +133,26 @@
         app:layout_constraintStart_toEndOf="@+id/textView31"
         app:layout_constraintTop_toBottomOf="@+id/txtHoraIniPaso4" />
 
-    <CalendarView
-        android:id="@+id/calendarView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/black"
-        android:backgroundTint="@color/black"
-        android:contextClickable="true"
-        android:focusedMonthDateColor="@color/black"
-        android:selectedWeekBackgroundColor="@color/black"
-        android:unfocusedMonthDateColor="@color/black"
-        android:weekNumberColor="@color/black"
-        android:weekSeparatorLineColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView31"
-        app:layout_constraintEnd_toStartOf="@+id/txtHoraIniPaso4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
-
-    <CalendarView
-        android:id="@+id/calendarView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="9dp"
-        android:background="@color/black"
-        android:backgroundTint="@color/black"
-        android:contextClickable="true"
-        android:focusedMonthDateColor="@color/black"
-        android:selectedWeekBackgroundColor="@color/black"
-        android:unfocusedMonthDateColor="@color/black"
-        android:weekNumberColor="@color/black"
-        android:weekSeparatorLineColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView33"
-        app:layout_constraintEnd_toStartOf="@+id/txtHoraFinPaso4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView31" />
-
     <EditText
         android:id="@+id/txtHoraIniPaso4"
-        android:layout_width="137dp"
-        android:layout_height="43dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="12dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Ej: 15:30 pm"
-        android:textColor="@android:color/darker_gray"
+        android:text="12:34"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView32"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/calendarView3"
+        app:layout_constraintStart_toEndOf="@+id/txtFechaInicio"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <EditText
         android:id="@+id/txtHoraFinPaso4"
-        android:layout_width="140dp"
-        android:layout_height="47dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="53dp"
         android:layout_marginBottom="153dp"
         android:ems="10"
@@ -202,7 +162,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSiguienteStep4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/calendarView4"
+        app:layout_constraintStart_toEndOf="@+id/txtFechaFin"
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
     <EditText
@@ -214,12 +174,43 @@
         android:layout_marginBottom="93dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Ej: 25"
-        android:textColor="@android:color/darker_gray"
+        android:text="21"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+    <EditText
+        android:id="@+id/txtFechaInicio"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="23/03/2021"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView31"
+        app:layout_constraintEnd_toStartOf="@+id/txtHoraIniPaso4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <EditText
+        android:id="@+id/txtFechaFin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView33"
+        app:layout_constraintEnd_toStartOf="@+id/txtHoraFinPaso4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

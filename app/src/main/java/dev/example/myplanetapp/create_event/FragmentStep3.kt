@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import androidx.navigation.findNavController
 import dev.example.myplanetapp.R
 
@@ -43,9 +44,11 @@ class FragmentStep3 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.btnSiguienteStep3).setOnClickListener{view.findNavController().navigate(R.id.action_fragmentStep3_to_fragmentStep4)}
+        globalDirección = view.findViewById<EditText>(R.id.txtDireccionPaso3).text.toString()
     }
 
     companion object {
+        var globalDirección = "";
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
