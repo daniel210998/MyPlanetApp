@@ -45,7 +45,7 @@
     <string name="apellidos">Apellidos</string>
     <string name="pais">Pais</string>
     <string name="nombres">Nombre Completo</string>
-    <string name="fecha_de_nacimiento">Fecha de Nacimiento</string>
+    <string name="fecha_de_nacimiento">Fecha de Nac: dd/mm/yyyy</string>
     <string name="dni">DNI</string>
 
     <string name="title_activity_login">LoginActivity</string>
