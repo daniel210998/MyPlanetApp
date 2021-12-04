@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_join_to_event_background"
+    android:orientation="vertical"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Detalles sobre este evento"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/bottommEventTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Titulo del evento"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Descripcion"
+        android:textColor="@color/planet_primaryColor"
+        android:textSize="14dp"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/bottomEventDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar tempus suscipit. Donec porta scelerisque efficitur. Cras lacus sem, placerat eget dolor in, dignissim maximus libero. Nunc gravida massa a hendrerit bibendum. Mauris sit amet lacus ultrices, laoreet diam"
+        android:textColor="@color/planet_primaryTabTextColor"
+        android:textSize="14dp"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Lugar"
+        android:textColor="@color/planet_primaryColor"
+        android:textSize="14dp"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/bottomEventPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Av ABC Lima Breña"
+        android:textColor="@color/planet_primaryTabTextColor"
+        android:textSize="14dp"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Hora"
+        android:textColor="@color/planet_primaryColor"
+        android:textSize="14dp"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/bottomEventTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="3:00 pm"
+        android:textColor="@color/planet_primaryTabTextColor"
+        android:textSize="14dp"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/textView61"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_weight="0.4"
+            android:text="Auspicia: "
+            android:textColor="@color/planet_primaryColor"
+            android:textSize="14dp"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/bottomEventSponsor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text="ESAN "
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bottomSpots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Quedan 14 lugares disponibles"
+        android:textColor="@color/planet_primaryTabTextColor"
+        android:textSize="14dp"
+        android:padding="10dp"
+        android:gravity="center"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bottomBtnApplyToEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quiero ser voluntario"
+        android:padding="10dp"
+        android:backgroundTint="@color/planet_primaryColor"/>
+
+</LinearLayout>
