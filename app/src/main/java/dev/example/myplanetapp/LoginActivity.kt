@@ -16,7 +16,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-//        val navController = findNavController(R.id.fragment)
+        val navController = findNavController(R.id.fragmentContainerView3)
 
 //        val BtnOpenFragment: Button = findViewById(R.id.btnCreateV)
 //        BtnOpenFragment.setOnClickListener {
