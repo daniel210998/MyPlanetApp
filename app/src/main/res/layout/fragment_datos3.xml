@@ -34,7 +34,10 @@
         android:textColorHighlight="#D64040"
         android:textColorHint="#B33E3E"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

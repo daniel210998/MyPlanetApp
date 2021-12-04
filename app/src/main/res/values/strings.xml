@@ -42,6 +42,12 @@
 
     <string name="valtxtFelicidades">Felicidades!
     El registro fue exitoso</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="pais">Pais</string>
+    <string name="nombres">Nombre Completo</string>
+    <string name="fecha_de_nacimiento">Fecha de Nacimiento</string>
+    <string name="dni">DNI</string>
+
     <string name="title_activity_login">LoginActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

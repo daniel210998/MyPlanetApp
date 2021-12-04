@@ -27,7 +27,7 @@
         android:layout_width="287dp"
         android:layout_height="40dp"
         android:ems="10"
-        android:hint="Apellidos"
+        android:hint="@string/apellidos"
         android:inputType="textPersonName"
         android:text="@string/valtxtApellido"
         android:textColor="#070707"
@@ -38,14 +38,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.27"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/txtPais"
         android:layout_width="287dp"
         android:layout_height="40dp"
         android:ems="10"
-        android:hint="País"
+        android:hint="@string/pais"
         android:inputType="textPersonName"
         android:text="@string/valtxtPais"
         android:textColor="#0B0B0B"
@@ -55,7 +56,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.347"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/txtEmail"
@@ -75,6 +77,15 @@
         app:layout_constraintVertical_bias="0.596"
         tools:ignore="TouchTargetSizeCheck" />
 
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
     <EditText
         android:id="@+id/txtPassword"
         android:layout_width="287dp"
@@ -91,14 +102,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.683"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/txtNombre"
         android:layout_width="286dp"
         android:layout_height="47dp"
         android:ems="10"
-        android:hint="Nombres"
+        android:hint="@string/nombres"
         android:inputType="textPersonName"
         android:text="@string/valtxtNombre"
         android:textColor="#090909"
@@ -109,14 +121,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.18"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/txtFecha"
         android:layout_width="286dp"
         android:layout_height="43dp"
         android:ems="10"
-        android:hint="Fecha de Nacimiento"
+        android:hint="@string/fecha_de_nacimiento"
         android:inputType="date"
         android:textColorHint="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -125,14 +138,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.435"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/txtDocumento"
         android:layout_width="287dp"
         android:layout_height="40dp"
         android:ems="10"
-        android:hint="DNI"
+        android:hint="@string/dni"
         android:inputType="textPersonName"
         android:text="@string/valtxtDNI"
         android:textColor="#0B0B0B"
@@ -143,7 +157,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.52"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
