@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/voluntarioFragment"
+        android:icon="@drawable/ic_person"
+        android:title="Voluntario" />
+    <item
+        android:id="@id/auspiciadorFragment"
+        android:icon="@drawable/ic_business"
+        android:title="Auspiciador" />
+</menu>
