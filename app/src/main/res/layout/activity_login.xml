@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFEFE"
+    android:background="#000000"
     tools:context=".LoginActivity">
 
 
@@ -12,11 +12,12 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
+        android:background="#020202"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView3" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView3"
+        app:menu="@menu/login_menu" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView3"
@@ -27,8 +28,8 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/login_menu"
         app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/login_menu"
         app:navGraph="@navigation/nav_graph_voluntario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

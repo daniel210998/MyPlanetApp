@@ -3,10 +3,10 @@
 
     <item
         android:id="@+id/voluntarioFragment"
-        android:title="Voluntario"
-        android:icon="@drawable/ic_person"/>
+        android:icon="@drawable/ic_person"
+        android:title="Voluntario" />
     <item
         android:id="@id/auspiciadorFragment"
-        android:title="Auspiciador"
-        android:icon="@drawable/ic_business"/>
+        android:icon="@drawable/ic_business"
+        android:title="Auspiciador" />
 </menu>
