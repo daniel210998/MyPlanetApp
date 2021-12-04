@@ -47,6 +47,8 @@ class JoinToEvent(val eventModel: VolunteeringEvent, val docId: String) : Bottom
             db.collection("event")
                 .document(docId)
                 .update("spots", eventModel.spots)
+
+            this.dismiss()
         }
 
     }
