@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPlanetApp">
-        <activity
-            android:name=".user_profile.CreateEventActivityFragmentStep1"
-            android:exported="true" />
+<!--        <activity-->
+<!--            android:name=".user_profile.CreateEventActivityFragmentStep1"-->
+<!--            android:exported="true" />-->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -26,21 +26,6 @@
         <activity
             android:name=".CreateEventActivity"
             android:exported="true">
-<<<<<<< HEAD
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-=======
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
->>>>>>> 234b1b7ea98322cd4ae21ffbe9806072afa9617d
         </activity>
         <activity
             android:name=".RegistroVoluntarioActivity"
@@ -60,19 +45,6 @@
             android:name=".UserMainActivity"
             android:exported="true">
 
-            <!-- <intent-filter> -->
-<<<<<<< HEAD
-            <!-- <action android:name="android.intent.action.main" /> -->
-
-
-            <!-- <category android:name="android.intent.category.launcher" /> -->
-=======
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
->>>>>>> 234b1b7ea98322cd4ae21ffbe9806072afa9617d
-            <!-- </intent-filter> -->
         </activity>
     </application>
 
