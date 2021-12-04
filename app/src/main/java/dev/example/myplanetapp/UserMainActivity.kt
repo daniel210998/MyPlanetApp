@@ -43,6 +43,10 @@ class UserMainActivity : AppCompatActivity() {
                 startActivity(Intent(this, LoginActivity::class.java))
                 true
             }
+            R.id.create_event -> {
+                startActivity(Intent(this, CreateEventActivity::class.java))
+                true
+            }
             else -> item.onNavDestinationSelected(navController)
         }
     }

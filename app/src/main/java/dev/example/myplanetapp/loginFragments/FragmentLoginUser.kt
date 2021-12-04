@@ -8,9 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import dev.example.myplanetapp.R
 import com.google.firebase.auth.FirebaseAuth
+import dev.example.myplanetapp.RegistroVoluntarioActivity
 import dev.example.myplanetapp.UserMainActivity
 
 class FragmentLoginUser : Fragment() {
@@ -33,6 +35,7 @@ class FragmentLoginUser : Fragment() {
         val txtEmail: EditText = view.findViewById(R.id.userEmail)
         val txtPassword: EditText = view.findViewById(R.id.userPassword)
         val btnLogin: Button = view.findViewById(R.id.btnUserLogin)
+        val btnRegister: TextView = view.findViewById(R.id.btnUserRegister)
 
         val db = FirebaseAuth.getInstance()
 
@@ -58,6 +61,10 @@ class FragmentLoginUser : Fragment() {
 
                     }
             }
+        }
+
+        btnRegister.setOnClickListener {
+            startActivity(Intent(activity, RegistroVoluntarioActivity::class.java))
         }
     }
 }
