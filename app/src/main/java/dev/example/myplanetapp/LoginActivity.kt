@@ -27,20 +27,20 @@ class LoginActivity : AppCompatActivity() {
 //            BtnOpenFragment.visibility = View.GONE
 //        }
 
-        val btnFragment3 : Button = findViewById(R.id.btnSalir)
-        btnFragment3.setOnClickListener {
-            val salir = FragmentDatos3()
-            val fragment : Fragment ? =
-                supportFragmentManager.findFragmentByTag(FragmentDatos3::class.java.simpleName)
-
-            if(fragment !is FragmentDatos3){
-                supportFragmentManager.beginTransaction()
-                    .add(R.id.container, salir, FragmentDatos3::class.java.simpleName)
-                    .commit()
-            }
-            btnFragment3.visibility = View.GONE
-
-        }
+//        val btnFragment3 : Button = findViewById(R.id.btnSalir)
+//        btnFragment3.setOnClickListener {
+//            val salir = FragmentDatos3()
+//            val fragment : Fragment ? =
+//                supportFragmentManager.findFragmentByTag(FragmentDatos3::class.java.simpleName)
+//
+//            if(fragment !is FragmentDatos3){
+//                supportFragmentManager.beginTransaction()
+//                    .add(R.id.container, salir, FragmentDatos3::class.java.simpleName)
+//                    .commit()
+//            }
+//            btnFragment3.visibility = View.GONE
+//
+//        }
     }
 
 }
