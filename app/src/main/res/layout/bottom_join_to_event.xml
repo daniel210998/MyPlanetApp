@@ -140,8 +140,21 @@
         android:id="@+id/bottomBtnApplyToEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quiero ser voluntario"
+        android:backgroundTint="@color/planet_primaryColor"
         android:padding="10dp"
-        android:backgroundTint="@color/planet_primaryColor"/>
+        android:text="Quiero ser voluntario" />
+
+    <TextView
+        android:id="@+id/bottomHiddenText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Ya no quedan lugares"
+        android:textColor="@color/planet_primaryTabTextColor"
+        android:textSize="15dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textStyle="bold" />
 
 </LinearLayout>

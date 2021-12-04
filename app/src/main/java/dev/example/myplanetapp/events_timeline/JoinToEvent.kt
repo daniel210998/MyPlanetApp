@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.view.isVisible
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.firestore.FirebaseFirestore
 import dev.example.myplanetapp.R
@@ -34,6 +35,8 @@ class JoinToEvent(val eventModel: VolunteeringEvent, val docId: String) : Bottom
         val eventSponsor: TextView = view.findViewById(R.id.bottomEventSponsor)
         val eventSpots: TextView = view.findViewById(R.id.bottomSpots)
         val btnApplyEvent: Button = view.findViewById(R.id.bottomBtnApplyToEvent)
+        val bottomHiddenText: TextView = view.findViewById(R.id.bottomHiddenText)
+        btnApplyEvent.isVisible = true
 
         val strSponsor = "Quedan " + eventModel.spots.toString() + " lugares disponibles"
 
@@ -42,14 +45,32 @@ class JoinToEvent(val eventModel: VolunteeringEvent, val docId: String) : Bottom
         eventSponsor.text = eventModel.sponsor
         eventSpots.text = strSponsor
 
+        val spotsAvaliable: Int = eventModel.spots!!
+        var thereAreSpots: Boolean = true
+
+        if(spotsAvaliable > 0)
+        {
+            btnApplyEvent.isVisible = true
+            thereAreSpots = true
+            eventSpots.visibility = View.VISIBLE
+            bottomHiddenText.visibility = View.GONE
+        }
+        else
+        {
+            btnApplyEvent.isVisible = false
+            thereAreSpots = false
+            eventSpots.visibility = View.GONE
+            bottomHiddenText.visibility = View.VISIBLE
+        }
+
+
         btnApplyEvent.setOnClickListener {
-            eventModel.spots = eventModel.spots!! - 1
+            eventModel.spots = spotsAvaliable - 1
             db.collection("event")
                 .document(docId)
                 .update("spots", eventModel.spots)
 
             this.dismiss()
         }
-
     }
 }
