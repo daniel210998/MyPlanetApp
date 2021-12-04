@@ -6,6 +6,8 @@
     <string name="valbtnEnviar">Enviar</string>
     <string name="valbtnSalir">Salir</string>
     <string name="valbtnLogin">Login</string>
+    <string name="valbtnCreateVoluntario">Create Account</string>
+    <string name="valbtnCreateAuspiciador">Create Account</string>
 
     <string name="valtxtNombre"></string>
     <string name="valtxtApellido"></string>

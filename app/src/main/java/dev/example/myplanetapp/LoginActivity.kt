@@ -6,11 +6,26 @@ import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import dev.example.myplanetapp.RegistroVoluntario.FragmentDatos3
+import dev.example.myplanetapp.LoginActivity as LoginActivity1
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+//        val BtnOpenFragment: Button = findViewById(R.id.btnCreateV)
+//        BtnOpenFragment.setOnClickListener {
+//            val LoginActivity = LoginActivity1()
+//            val fragment : Fragment? =
+//                supportFragmentManager.findFragmentByTag(LoginActivity::class.java.simpleName)
+//
+//            if(fragment !is LoginActivity1){
+//                supportFragmentManager.beginTransaction()
+//                    .add(R.id., LoginActivity, LoginActivity::class.java.simpleName)
+//
+//            }
+//            BtnOpenFragment.visibility = View.GONE
+//        }
 
         val btnFragment3 : Button = findViewById(R.id.btnSalir)
         btnFragment3.setOnClickListener {
@@ -24,6 +39,8 @@ class LoginActivity : AppCompatActivity() {
                     .commit()
             }
             btnFragment3.visibility = View.GONE
+
         }
     }
+
 }
