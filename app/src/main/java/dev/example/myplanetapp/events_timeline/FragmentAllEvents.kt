@@ -45,6 +45,7 @@ class FragmentAllEvents : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //filter the items before passing to the recycler view
         val query: Query = collectionReference.orderBy("id", Query.Direction.ASCENDING)
         val firestoreRecyclerOptions: FirestoreRecyclerOptions<VolunteeringEvent> = FirestoreRecyclerOptions.Builder<VolunteeringEvent>()
             .setQuery(query, VolunteeringEvent::class.java)

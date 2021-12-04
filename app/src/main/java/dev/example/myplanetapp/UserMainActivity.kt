@@ -1,10 +1,12 @@
 package dev.example.myplanetapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -36,6 +38,16 @@ class UserMainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_event)
-        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+        return when(item.itemId)    {
+            R.id.logout_user -> {
+                startActivity(Intent(this, LoginActivity::class.java))
+                true
+            }
+            R.id.create_event -> {
+                startActivity(Intent(this, CreateEventActivity::class.java))
+                true
+            }
+            else -> item.onNavDestinationSelected(navController)
+        }
     }
 }
